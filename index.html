@@ -1,93 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Franco Antunez's Portfolio</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body {
-            font-family: "Lato", sans-serif;
-        }
+<title>Franco Antunez's Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-        }
+  .paragraph {
+    width: 85%;
+    text-align: justify;
+  }
 
-        .paragraph {
-            width: 85%;
-            text-align: justify;
-        }
+  .headshot {
+    width: 10%;
+    margin-left: 20px; /* Adjust the margin as needed */
+    max-width:2px;
+  }
+  .project {
+    width: 85%;
+    text-align: justify;
+  }
 
-        .headshot {
-            width: 10%;
-            margin-left: 20px;
-            /* Adjust the margin as needed */
-            max-width: 200px;
-        }
-
-        .project {
-            width: 85%;
-            text-align: justify;
-        }
-
-        .project img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
+  .project img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
 </head>
 <body>
 
-<div class="header imager">
+  <div class="header imager">
     <img src="shop.jpeg" style="width:100%">
-</div>
+  </div>
 
 <!-- Page content -->
-<div class="content" style="max-width:2000px;margin-top:46px">
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
 
-    <!-- About me section -->
-    <div class="container">
-        <div class="content" style="max-width: 600px;">
-            <h2>About Me</h2>
-            <p>My name is Franco Antunez, currently a Junior at UNCC studying BS Data Science. I focus on tire modeling and vehicle dynamics design with UNCC Formula SAE race team. In my free time, I pursue film photography and I'm a racing fan. This portfolio showcases my projects from school and FSAE.</p>
-        </div>
+  <!-- About me section -->
+<div class="container">
+  <div class="w3-container w3-content w3-padding-64" style="max-width: 600px;">
+    <h2 class="w3-wide">About Me</h2>
+    <p class="w3-justify">My name is Franco Antunez and I am currently a Junior at UNCC in BS of Data Science. I have been on the UNCC 
+      Formula SAE race team where I focus primarily on tire modeling and vehicle dynamics design. In my free time I do film photography and am a racing fan.
+      the goal of the my portfolio site is to showcase projects from school and FSAE.</p>
+  </div>
 
-        <div class="headshot">
-            <img src="headshot.jpeg" alt="Headshot">
-        </div>
-    </div>
-
-    <!-- Projects Section -->
-    <div class="black">
-        <div class="paragraph">
-            <div class="content">
-                <h2 class="w3-wide">Formula SAE Tire Modeling</h2>
-                <p>Tire choice and justification are integral in vehicle and suspension design. This project uses data from Formula SAE TTC (Tire Testing Consortium) and Calspan to justify tire selection for the 49ers Racing FSAE car. A simplified Pacejka tire model fits raw data for comparison of tire brands and compounds, with ongoing improvements for accuracy.</p>
-                <a href="https://github.com/FrancoA325/FSAE-Tire-Data" target="_blank">Tire Modeling GitHub Repo</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Contact Section -->
-    <div class="content" style="max-width:800px" id="contact">
-        <h2>Contact</h2>
-        <div class="margin-bottom">
-            <i class="fa fa-map-marker" style="width:30px"></i> Charlotte, NC<br>
-            <i class="fa fa-phone" style="width:30px"></i> Phone: (704)-343-1289<br>
-            <i class="fa fa-envelope" style="width:30px"></i> Email: fantunez04@gmail.com<br>
-            <a href="https://github.com/FrancoA325" target="_blank">GitHub</a><br>
-            <a href="FrancoAntunezResume2023.pdf" target="_blank">Resume</a>
-        </div>
-    </div>
-
-    <!-- End Page Content -->
+  <div class="headshot">
+    <img src="headshot.jpeg" alt="Headshot" style="max-width: 200px;">
+  </div>
 </div>
+  <!-- Projects Section -->
+<div class="w3-black">
+  <div class="paragraph">
+    <div class="w3-container w3-content">
+      <h2 class="w3-wide w3-center">Formula SAE Tire Modeling</h2>
+      <p class="w3-center">Tire choice and justification is an integral part in vehicle and suspension design. The primary goal of this project is to take data provided
+        by the Formula SAE TTC (Tire Testing Consortium) and Calspan to make a justified tire choice for the 49ers Racing FSAE car. The software uses a
+        simplified Pacejka tire model to fit the provided raw data for comparison of different tire brands and compounds. The project is still growing and
+        more features are being added to provide a more accurate tire model and build a stronger justification for tire choice.
+      </p>
+      <a href="https://github.com/FrancoA325/FSAE-Tire-Data" target="_blank">Tire Modeling GitHub Repo</a>
+    </div>
+  </div>
+</div>
+
+  <!-- The Contact Section -->
+  <div class="w3-container w3-content w3-padding-64 w3-center" style="max-width:800px" id="contact">
+    <h2 class="w3-wide">CONTACT</h2>
+    <div class="w3-wide">
+      <div class=" w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> Charlotte, NC<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: (704)-343-1289<br>
+        <i class="fa fa-envelope" style="width:30px"></i> Email: fantunez04@gmail.com<br>
+        <a href="https://github.com/FrancoA325" target="_blank">Click For GitHub</a><br>
+        <a href="FrancoAntunezResume2023.pdf" target="_blank">Click For Resume</a>
+      </div>
+    </div>
+</div>
+
+  
+<!-- End Page Content -->
+</div>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 
 </body>
 </html>
