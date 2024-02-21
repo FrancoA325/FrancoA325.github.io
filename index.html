@@ -4,47 +4,35 @@
     <title>Franco Antunez's Portfolio</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body {
-            font-family: "Lato", sans-serif;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
         .container {
             max-width: 800px;
             margin: 0 auto;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
+            padding: 20px;
         }
 
-        .paragraph {
-            width: 85%;
-            text-align: justify;
+        h1 {
+            text-align: center;
         }
 
-        .headshot {
-            width: 10%;
-            margin-left: 20px;
-            max-width:2px;
+        h2 {
+            margin-top: 20px;
         }
 
-        .project {
-            width: 85%;
-            text-align: justify;
+        .section {
+            margin-top: 20px;
         }
 
-        .project img {
+        .section img {
             max-width: 100%;
             height: auto;
-        }
-
-        /* Additional Styles */
-        .content {
-            margin: 0 auto;
-            padding: 0 20px;
+            margin-top: 10px;
         }
 
         .header {
@@ -62,45 +50,32 @@
             color: #0000FF; /* Change color on hover */
         }
 
-        .imager img {
-            width: 100%;
-        }
-
         .black {
             background-color: #000;
             color: #fff;
             padding: 20px;
         }
 
-        .margin-bottom {
-            margin-bottom: 20px;
+        /* Additional Styles */
+        .paragraph {
+            width: 85%;
+            text-align: justify;
         }
 
-        .fa {
-            width: 30px;
-        }
-
-        /* Responsive Styles */
-        @media screen and (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .headshot {
-                margin-left: 0;
-                margin-top: 20px;
-            }
+        .headshot {
+            width: 10%;
+            margin-left: 20px;
+            max-width: 200px;
         }
     </style>
 </head>
 <body>
-
-<div class="header w3-black">
-    <a href="https://francoa325.github.io/"  style="color: white;">Home</a>
-    <a href="about.html"  style="color: white;">About Me</a>
-    <a href="projects.html"  style="color: white;">Projects</a>
-    <a href="contact.html"  style="color: white;">Contact</a>
-</div>
+    <div class="header">
+        <a href="https://francoa325.github.io/"  style="color: black;">Home</a>
+        <a href="about.html"  style="color: black;">About Me</a>
+        <a href="projects.html"  style="color: black;">Projects</a>
+        <a href="contact.html"  style="color: black;">Contact</a>
+    </div>
 
 <div class="header imager">
   <img src="shop.jpeg" style="width:100%">
