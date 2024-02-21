@@ -49,46 +49,42 @@
 
     <div class="section">
         <h2>Intro</h2>
-        <p>My interest in aviation and airlines is what drove this project.
-             I looked for a Kaggle dataset centered around the topic. 
-             The dataset that I found contains data on airline flight delays and includes valuable information regarding 
-             different airline names, delay types, delay times, and total delays all from 2019 to 2020. In my initial analysis, 
-             I utilized the .describe() method to extract summary statistics and the .dtypes attribute to examine data types. 
-             These preliminary steps provided me with a solid foundation, offering an initial understanding of the dataset's 
-             structure and paving the way for further exploration.</p>
+        <p>In seeking a suitable dataset for this project, I aimed to strike a balance between adequacy in size for training 
+            a simple KNN model and manageability for processing. The chosen dataset comprises measurements for various bills, 
+            providing a foundation for training a model to identify counterfeit bills based on their size and general measurements. 
+            Given the global challenge posed by counterfeit currency to financial systems, our objective was clear: to develop a 
+            model capable of accurately discerning between genuine and fake bills solely through their size properties. 
+        </p>
+        <p>I started to look a the data that was in the dataset and get an idea of the parameters. 
+            I started with .describe() and  .head(). I then plotted the data distrobutions for each
+            of the columns.
+        </p>
         <img src="/airlinePhotos/describe.png" alt="Image 1">
         <img src="/airlinePhotos/rows.png" alt="Image 2">
-        <p>With an idea of the dataset structure and content, 
-            I decided that I wanted to identify the primary cause of delays for airlines and what 
-            I could do to streamline my travel and mitigate delays. 
-            I wanted to start looking for trends in the data that could help me answer my questions.</p>
     </div>
 
     <div class="section">
-        <h2>Processing and Data Visualization</h2>
-        <p>Upon my initial examination of the dataset, 
-            my focus shifted towards identifying the most prevalent delay types categorized by each year (2019 and 2020). 
-            I determined that the data was sufficiently clean, eliminating the need for further data cleaning. 
-            After sorting data by year, I created the following plots which are a simple initial analysis of the data.</p>
+        <h2>Modeling</h2>
+        <p>Before I could start modeling the data I needed to do some more data management. Initially, 
+            any rows containing missing values were removed from the dataset. The remaining dataset was then divided 
+            into two subsets: one containing the measurements of the bills (xData) and another containing the corresponding 
+            labels indicating whether each bill was genuine or counterfeit (yData). Following this, 
+            the dataset was split into training and testing sets using the train_test_split function from scikit-learn.
+            I then used scikit-learn's SimpleImputer to handle any of the missing values in the data and replaced 
+            them with the mean of the given channel and the means were calculated with the training data. 
+            Imputation was applied to to both the train and test subsets and the complete datasets are ready 
+            for training and evaluation of the model.
+        </p>
         <img src="airlinePhotos/DelayCat.png" alt="Image 3">
-        <p>The primary contributor to airline delays appears to be related to delays caused by another flight on the same aircraft. 
-            The late aircraft delay data was too vague and did not provide clear insights into the causes of airline delays. 
-            To obtain more specific information, I created a second graph that illustrates the total delays exceeding 
-            15 minutes for different airlines. Notably, there were fewer long flight delays in 2020 compared to 2019.</p>
-        <p>The data also reveals that larger airlines tend to experience more delays, which is expected given their higher volume of flights. 
-            However, it's worth noting that even smaller airlines exhibit a significant number of delays. 
-            This observation suggests that smaller airlines may face challenges related to factors such as inclement weather, 
-            mechanical problems, and crew shortages, making them more susceptible to disruptions.</p>
+        <p>The next step for the project was to create and train the KNN classifier model. Using the KNeighborsClassifier 
+            function, I set the K nearest neighbors to 3 and then used .fit() to fit my X and Y training data. With the 
+            model trained I could test and do some analysis. 
+        </p>
         <img src="airlinePhotos/15delay.png" alt="Image 3">
-        <p>Upon analyzing the first two graphs, I decided to focus on the second most common cause of delays, 
-            which is the National Aviation System (NAS). The Bureau of Transportation Statistics defines NAS delays as, 
-            "Delays and cancellations attributable to the national aviation system that refer to a broad set of conditions, 
-            such as non-extreme weather conditions, airport operations, heavy traffic volume, and air traffic control." 
-            Despite late aircraft delays being more prevalent, it seems that the root cause of delays might lie elsewhere. 
-            NAS delays appear to be a likely culprit, given their association with various factors related to airport operations.</p>
-        <p>I then created a final plot that illustrates different airlines alongside their total 
-            NAS delays and the corresponding time affected by NAS delays. This visual representation aims to provide a 
-            clearer understanding of how each airline is impacted by delays attributed to the National Aviation System.</p>
+        <p>To test the model I use .predict() on the imputed x test data. To check the accuracy I compared the yTest and yPredict
+            values to output a percentage accuracy. I also wanted to create a confusion matrix to better visualize the 
+            models predictions. I still wanted to do some more analysis so I calculated a p value
+        </p>
         <img src="airlinePhotos/NASdelay.png" alt="Image 3">
     </div>
 
@@ -115,8 +111,6 @@
         <h2>Sources and Links</h2>
         <ul>
             <li><a href="https://github.com/FrancoA325/Airlines">https://github.com/FrancoA325/Airlines</a></li>
-            <li><a href="https://www.bts.gov/explore-topics-and-geography/topics/airline-time-performance-and-causes-flight-delays">
-                https://www.bts.gov/explore-topics-and-geography/topics/airline-time-performance-and-causes-flight-delays</a></li>
             <li><a href="https://www.kaggle.com/datasets/eugeniyosetrov/airline-delays?rvi=1">
                 https://www.kaggle.com/datasets/eugeniyosetrov/airline-delays?rvi=1</a></li>
         </ul>
