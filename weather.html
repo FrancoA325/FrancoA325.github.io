@@ -69,11 +69,21 @@
 
         <div class="section">
             <h2>Intro</h2>
-            <p>I chose this project because .</p>
-            <img src="/weatherPhotos/dataset.png" alt="Dataset Preview">
-            <p>By utilizing statistical measures such as mean absolute error and R-squared values, 
-                I gained insights into the performance of each regression model and their 
-                suitability for weather prediction tasks.</p>
+            <p>I chose this project because the 49ers Racing FSAE team goes to competition in May in Jackson, MI. The weather plays such
+                a large role in the performance of a racecar that it can be beneficial to try and create a model to make temperature predictions. 
+                I started to try and find a dataset that contained historical weather data for the lansing area for the month of May. I found a site
+                that contained historical NOAA data that I could search location and times.
+            </p>
+            <h2>Data and Processing</h2>
+            <img src="/weatherPhotos/initData.png" alt="Initial Data">
+            <p>The above image shows a snippet of the data with each of the channels. The biggest issues that I encountered
+                were related to the date channel, I had data that spanned 2018-2023 but having the year threw off initial plotting.
+                Part of my initial processing includes looking at the generic distrobutions of a few of the columns to see if any of
+                the data is skewed or anything that looks completely useless.
+            </p>
+            <img src="/weatherPhotos/maxTemp.png" alt="Max Dist">
+            <img src="/weatherPhotos/minTemp.png" alt="Min Dist">
+            <img src="/weatherPhotos/avgTemp.png" alt="Avg Dist">
         </div>
 
         <div class="section">
