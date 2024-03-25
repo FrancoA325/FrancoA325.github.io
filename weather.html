@@ -88,31 +88,34 @@
 
         <div class="section">
             <h2>Linear Regression Experiment</h2>
-            <p>For the first experiment, I applied linear regression to the weather dataset. 
-                This method aims to establish a linear relationship between input features 
-                such as temperature, humidity, and wind speed, and the target variable, which 
-                in this case, is the precipitation level. Despite its simplicity, linear 
-                regression provided a baseline for predicting weather patterns.</p>
-            <img src="/weatherPhotos/linreg_result.png" alt="Linear Regression Results">
-            <p>The results of the linear regression experiment revealed a moderate 
-                level of accuracy in predicting precipitation levels. However, 
-                the model's performance varied depending on the complexity of the 
-                weather patterns.</p>
+            <p>I started by building a linear regression model for the dataset. I decided to use the 'MaxTmp', and 'Depart' columns
+                for the X. And for the Y, I am using the AvgTmp variable because that is the target metric. It's important to note that
+                after some X experimentation, the models would be overtrained with too many of the columns included. The image below shows
+                where the X and y are initialized, the training and test split for the model, and testing the model. To test the model I used 
+                MSE, MAE, and RMSE.
+            </p>
+            <img src="/weatherPhotos/Model1.png" alt="LinReg Training">
+            <p>The results of the linear regression experiment revealed a high level of accuracy. To try and test and represent the model
+                I created some plots with data from each May 2018-2023 where I had the model predict AvgTmp and built a simple line of best fit.
+                I also included plots with a polynomial fit for linear regression and the rest of the models.
+            </p>
+            <img src="/weatherPhotos/linreg1.png" alt="LinReg plot">
+            <img src="/weatherPhotos/linreg2.png" alt="LinReg plot">
         </div>
 
         <div class="section">
             <h2>Random Forest Regression Experiment</h2>
             <p>Building upon the insights gained from the linear regression experiment, 
                 I proceeded to implement random forest regression. This ensemble learning 
-                technique leverages multiple decision trees to improve prediction accuracy 
-                and mitigate overfitting. By harnessing the power of parallel computation 
-                and feature randomness, random forest regression offers a robust solution 
-                for weather forecasting.</p>
-            <img src="/weatherPhotos/random_forest_result.png" alt="Random Forest Regression Results">
-            <p>The random forest regression experiment yielded promising results, 
-                demonstrating enhanced predictive capabilities compared to linear regression.
-                 The model's ability to capture nonlinear relationships and handle large datasets
-                  contributed to its effectiveness in weather prediction.</p>
+                technique uses multiple decision trees to improve prediction accuracy 
+                and mitigate overfitting. The random forest integration is similar to linear regression in 
+                initialization and fitting.</p>
+            <p>Using the same metrics for the random trees and plotting the same data, we can look at the overall fitting quality.
+                The following images show the fitting and the plotting of the new model. In general it seems that random forest is 
+                doing a better job of making predictions.
+            </p>
+            <img src="/weatherPhotos/randomInit.png" alt="random initial">
+            <img src="/weatherPhotos/randomplot.png" alt="random plot">
         </div>
 
         <div class="section">
@@ -123,11 +126,12 @@
                 based on simple decision rules. Despite their susceptibility to overfitting, 
                 decision tree regression models offer valuable insights into the underlying 
                 patterns present in weather data.</p>
-            <img src="/weatherPhotos/decision_tree_result.png" alt="Decision Tree Regression Results">
-            <p>The decision tree regression experiment showcased the model's ability to capture 
-                intricate relationships within the weather dataset. By iteratively splitting the 
-                feature space, decision trees provided intuitive predictions, albeit with some 
-                limitations in handling complex interactions.</p>
+            <p>The decision tree regression experiment effectively predicted the AvgTmp. The metrics were calculated the same as the other 
+                models. Plotting of the data is also similar, and it is clear to see that the differences in predictions across all of the models
+                is neglegable and I think that any one of them could be used in a practical application. 
+            </p>
+            <img src="/weatherPhotos/Decision1.png" alt="Decision metrics">
+            <img src="/weatherPhotos/DecPlot.png" alt="Decision plots">
         </div>
 
         <div class="section">
@@ -136,15 +140,13 @@
                 I gained valuable insights into the challenges and opportunities 
                 associated with weather prediction. While linear regression provided
                  a simple yet interpretable approach, random forest regression and 
-                 decision tree regression offered superior performance in capturing 
-                 the nuances of weather patterns.</p>
+                 decision tree regression offered superior performance in making my weather predictions.</p>
             <p>The findings from this project underscore the importance of employing 
                 advanced machine learning algorithms in weather forecasting tasks. 
                 By harnessing the collective intelligence of ensemble methods and 
                 non-parametric models, meteorologists and climate scientists can improve
-                 the accuracy and reliability of weather predictions, thereby enhancing 
-                 public safety and resource allocation.</p>
-            <p>Moreover, the ethical implications of this project center around 
+                 the accuracy and reliability of weather predictions.</p>
+            <p>The ethical implications of this project center around 
                 responsible data usage and transparency in model development. 
                 By adhering to ethical guidelines and promoting open access 
                 to weather data and research findings, we can foster collaboration and 
@@ -152,15 +154,12 @@
                 trustworthiness.</p>
         </div>
     </div>
-</body>
+
     <div class="section">
         <h2>Sources and Links</h2>
         <ul>
-            <li><a href="https://github.com/FrancoA325/Airlines">https://github.com/FrancoA325/Airlines</a></li>
-            <li><a href="https://www.bts.gov/explore-topics-and-geography/topics/airline-time-performance-and-causes-flight-delays">
-                https://www.bts.gov/explore-topics-and-geography/topics/airline-time-performance-and-causes-flight-delays</a></li>
-            <li><a href="https://www.kaggle.com/datasets/eugeniyosetrov/airline-delays?rvi=1">
-                https://www.kaggle.com/datasets/eugeniyosetrov/airline-delays?rvi=1</a></li>
+            <li><a href="https://github.com/FrancoA325/Weather-Reg">https://github.com/FrancoA325/Weather-Reg</a></li>
+            <li><a href="https://nowdata.rcc-acis.org/grr/">https://nowdata.rcc-acis.org/grr/</a></li>
         </ul>
     </div>
 </div>
