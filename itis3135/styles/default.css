@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+.indented {
+    text-indent: 50px;
+}
+img {
+    height: auto;
+}
+main {
+    padding: 70px; /* Add some padding to the main content */
+}
+script {
+    text-align: center;
+}
+footer {
+    margin-bottom: 20px;
+}
