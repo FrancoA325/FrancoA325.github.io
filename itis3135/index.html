@@ -4,6 +4,7 @@
         <title>Franco Antunez || Funky Ant</title>
         <link rel ="stylesheet" href="styles/default.css">
         <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous" alt="Accumulus"></script>
+        <script src="scripts/HTMLInclude.js" defer></script>
     </head>
     <body>
         <div id="header"></div>
@@ -40,20 +41,5 @@
             <a href = "contract.html">Contract</a>
         </main>
         <div id="footer"></div>
-
-        <script>
-            // Function to load external HTML into a div
-            function loadHTML(divId, url) {
-                fetch(url)
-                    .then(response => response.text())
-                    .then(data => {
-                        document.getElementById(divId).innerHTML = data;
-                    });
-            }
-    
-            // Load header and footer
-            loadHTML('header', 'components/header.html');
-            loadHTML('footer', 'components/footer.html');
-        </script>
     </body>
 </html>
