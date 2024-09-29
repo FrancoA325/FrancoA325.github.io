@@ -1,3 +1,4 @@
+/* main things for styling */
 body {
     margin: 0;
     padding: 0;
@@ -20,6 +21,7 @@ script {
 footer {
     margin-bottom: 20px;
 }
+/* table stuff */
 table {
     width: 50%;
     border-collapse: collapse;
@@ -32,4 +34,33 @@ table, th, td {
 }
 th {
     background-color: #f2f2f2;
+}
+/* Form Stuff */
+button {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Light text color */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555; /* Slightly lighter dark color on hover */
+}
+
+/* Input element styling */
+input[type="text"],
+input[type="email"],
+input[type="checkbox"],
+input[type="radio"] {
+    border: 1px solid #ccc; /* Border color */
+    padding: 8px; /* Padding */
+    font-size: 16px; /* Font size */
+    margin-bottom: 10px; /* Margin bottom */
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto; /* Auto width for checkbox and radio */
+    margin-right: 5px; /* Margin right for spacing */
 }

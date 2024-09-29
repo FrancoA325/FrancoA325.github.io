@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Forms</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous" alt="Accumulus"></script>
+    <script src="scripts/HTMLInclude.js" defer></script>
+</head>
+<body>
+    <div id="header"></div>
+    <h1>Website Form</h1>
+    <main>
+        <form action="#" method="post">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name">
+            </div>
+            <div>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+            </div>
+            <div>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+            <div>
+                <label>Services Interested In:</label>
+                <div>
+                    <input type="checkbox" id="service1" name="services" value="crochet">
+                    <label for="service1">Tire Modeling</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="service2" name="services" value="knitting">
+                    <label for="service2">Vehicle Kinematic Simulation</label>
+                </div>
+            </div>
+            <div>
+                <label>Preferred Contact Method:</label>
+                <div>
+                    <input type="radio" id="contactEmail" name="contactMethod" value="email" required>
+                    <label for="contactEmail">Email</label>
+                </div>
+                <div>
+                    <input type="radio" id="contactPhone" name="contactMethod" value="phone">
+                    <label for="contactPhone">Phone</label>
+                </div>
+            </div>
+            <div>
+                <label for="quantity">Quantity:</label>
+                <select id="quantity" name="quantity" required>
+                    <option value="">Select Series</option>
+                    <option value="1">NASCAR Cup Series</option>
+                    <option value="2">Xfinity Series</option>
+                    <option value="3">Craftsman Truck Series</option>
+                    <option value="4">IMSA Sports Car</option>
+                    <option value="5">Trans-Am</option>
+                </select>
+            </div>
+            <div>
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </main>
+    <div id="footer"></div>
+</body>
+</html>
