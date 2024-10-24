@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Scripts</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="scripts/HTMLInclude.js" defer></script>
+    <script src="scripts/defaultscripts.js" defer></script>
+</head>
+<body>
+    <div id="header"></div>
+    <main>
+        <h1>First Scripts</h1>
+        <h3 id="dateTime"></h3>
+        <div>
+            <label for="userName">Enter your name:</label>
+            <input type="text" id="userName">
+        </div>
+        <div>
+            <label for="userMood">How are you feeling?</label>
+            <input type="text" id="userMood">
+        </div>
+        <button onclick="greetUser()">Submit</button>
+        <p id="greeting"></p>
+        <div>
+            <label for="favoriteNumber">Enter your favorite number (0-10):</label>
+            <input type="number" id="favoriteNumber">
+        </div>
+        <button onclick="checkPolygon()">Polygon Check</button>
+        <p id="polygon"></p>
+
+        <div>
+            <button onclick = "tires()">Tire Performance</button>
+            <button onclick = "suspension()">Suspension Performance</button>
+            <button onclick = "teamInfo()">Client Team Info</button>
+            <button onclick = "mailingList()">Get Email Alerts</button>
+        </div>
+    </main>
+    <div id="footer"></div>
+</body>
+</html>
