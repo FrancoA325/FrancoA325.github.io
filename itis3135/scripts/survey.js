@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.getElementById('introForm').addEventListener('reset', function() {
         document.getElementById('result').innerHTML = '';
+        document.getElementById('introForm').style.display = 'block';
     });
 });
 
@@ -42,12 +43,16 @@ function displayFormData() {
         resultDiv.appendChild(p);
     });
 
+    // Hide the form inputs but keep the reset button
+    form.style.display = 'none';
+
     const resetLink = document.createElement('a');
     resetLink.href = '#';
     resetLink.innerText = 'Reset';
     resetLink.onclick = function() {
         form.reset();
         resultDiv.innerHTML = '';
+        form.style.display = 'block';
     };
     resultDiv.appendChild(resetLink);
 }
