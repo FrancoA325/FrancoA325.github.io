@@ -33,8 +33,20 @@
         <div>
             <button onclick = "tires()">Tire Performance</button>
             <button onclick = "suspension()">Suspension Performance</button>
-            <button onclick = "teamInfo()">Client Team Info</button>
-            <button onclick = "mailingList()">Get Email Alerts</button>
+            <button onclick = "price()">Get A Quote</button>
+        </div>
+        <div class="modal" id="teamInfoModal">
+            <h2>Enter Team Information</h2>
+            <input type="text" id="teamName" placeholder="Team Name">
+            <input type="text" id="teamMembers" placeholder="Team Members (comma separated)">
+            <input type="text" id="teamLocation" placeholder="Team Location">
+            <button onclick="submitTeamInfo()">Submit Team Info</button>
+        </div>  
+
+        <div class="modal" id="mailingModal">
+            <h2>Enter Email Address For Mailing List</h2>
+            <input type="text" id="email" placeholder="Email Address">
+            <button onclick="mailingList()">Submit Email</button>
         </div>
     </main>
     <div id="footer"></div>
