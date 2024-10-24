@@ -1,0 +1,132 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header and footer styling */
+#header, #footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Heading styling */
+h1, h2 {
+    color: #444;
+    text-align: center;
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Paragraph styling */
+p {
+    margin-bottom: 20px;
+}
+
+/* List styling */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Link styling */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Button styling */
+button {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Light text color */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555; /* Slightly lighter dark color on hover */
+}
+
+/* Input element styling */
+input[type="text"],
+input[type="email"],
+input[type="checkbox"],
+input[type="radio"] {
+    border: 1px solid #ccc; /* Border color */
+    padding: 8px; /* Padding */
+    font-size: 16px; /* Font size */
+    margin-bottom: 10px; /* Margin bottom */
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto; /* Auto width for checkbox and radio */
+    margin-right: 5px; /* Margin right for spacing */
+}
+
+main, .maincontainer {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+/* table styling with lines and colored boxes for headers */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    text-align: center; /* Center text in table cells */
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+th {
+    background-color: #333; /* Dark background color for headers */
+    color: #fff; /* Light text color for headers */
+}
+
+td {
+    background-color: #f9f9f9; /* Light background color for table cells */
+}
+
+tr:nth-child(even) td {
+    background-color: #f1f1f1; /* Slightly darker background for even rows */
+}
+
+@media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
+    #colorbox {
+        background-color:yellow;
+    }
+}
+
+@media screen and ( min-width: 601px ) and ( max-width: 980px )  {
+    #colorbox {
+       background-color:orange;
+    }
+}
+
+@media screen and ( min-width: 370px ) and ( max-width: 600px ) {
+    #colorbox {
+        background-color:red;
+    }
+}
