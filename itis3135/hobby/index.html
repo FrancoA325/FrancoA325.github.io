@@ -1,40 +1,306 @@
 <!DOCTYPE html>
-<html lang ="en">
-    <head>
-        <title>Hobby Midterm</title>
-        <link rel ="stylesheet" href="styles/hobbystyles.css">
-        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous" alt="Accumulus"></script>
-        <script src="scripts/HTMLInclude.js" defer></script>
-    </head>
-    <body>
-        <div id="header"></div>
-        <h1>Motorsports Simulation Hobby Page</h1>
-        <main>
-            <p>This webpage is an interest page about Motorsports data processing and tire modeling/simulation</p>
-            <img src="images/IMG_0007.JPG" width="400" alt="office me">
-            <p class="indented"><strong>Personal Background:</strong> I grew up here in charlotte and decided to 
-                come to UNCC because of the NASCAR and Racing connections. I love all forms of motorsports. 
-                When I graduate I hope to be working in industry making tools, tire data processing, 
-                and working in vehicle development and simulation. 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASCAR Enthusiast</title>
+    <link rel="icon" href="images/favicon.ico">
+    <script src="scripts/hobbyscripts.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        header h1 {
+            margin: 0;
+            color: #ffcc00;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #ffcc00;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #2a2a2a;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        section {
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        .indented {
+            text-indent: 50px;
+        }
+        figure {
+            margin: 20px 0;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+        }
+        .validation-buttons img {
+            width: 100px;
+            margin: 5px;
+        }
+        .validation-buttons a {
+            display: inline-block;
+        }
+        a {
+            color: #ffcc00;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            text-align: center; /* Center text in table cells */
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #333; /* Dark background color for headers */
+            color: #fff; /* Light text color for headers */
+        }
+
+        td {
+            background-color: #2a2a2a; /* Light background color for table cells */
+        }
+
+        tr:nth-child(even) td {
+            background-color: #2a2a2a; /* Slightly darker background for even rows */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>NASCAR Enthusiast Site</h1>
+        <nav>
+            <a href="#" data-section="home">What</a>
+            <a href="#" data-section="about">Who</a>
+            <a href="#" data-section="schedule">When</a>
+            <a href="#" data-section="tracks">Where</a>
+            <a href="#" data-section="how">How</a>
+            <a href="#" data-section="why">Why</a>
+            <a href="#" data-section="aiprompts">AI Prompts</a>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="active">
+            <h2>Home</h2>
+            <p>Welcome to my NASCAR Enthusiast page. Here, you'll find information about my passion for NASCAR racing, events, and simulations.</p>
+            <p>Each page will cover aspects of NASCAR as an organization,
+                racing events, and how to get into the sport. I hope you enjoy learning about my favorite hobby!
             </p>
-            <p class="indented"><strong>Professional Background:</strong> Over the summer and into september I 
-                interned at Toyota Racing Development (TRD) in the Vehicle Development and Tires Group. 
-                I worked on tools for NASCAR and IMSA. I&apos;m hoping to get an offer in November for a coop 
-                and go full time when I graduate in May.
-            </p>
-            <p class="indented"><strong>Academic Background:</strong> I am a Data Science Major and minoring in Software Engineering, 
-                I&apos;m a Senior this year.
-            </p>
-            <p class="indented"><strong>Background in this Subject:</strong> I have mostly been a backend developer with my work at 
-                TRD but have full stack experience, I&apos;m not extremely familiar with js, html, or css 
-                but i have worked with it before.
-            </p>
-            <p class="indented"><strong>Primary Computer Platform:</strong> Mac OS and windows</p>
-            <p><strong>Courses I&apos;m Taking and Why:</strong></p>
-            <p class="indented"><strong>ITIS 3135: Web-based Application Design and Development:</strong> Requirement for my minor.</p>
-            <p class="indented"><strong>DTSC 3601: Predictive Analytics:</strong> Requirement for the major.</p>
-            <p class="indented"><strong>ITSC 3155: Software Engineering:</strong> Requirement for my minor.</p>
-        </main>
-        <div id="footer"></div>
-    </body>
+            <figure>
+                <img src="images/NASCAR.svg" alt="NASCAR Racing" width="300">
+                <figcaption><a href="https://commons.wikimedia.org/wiki/File:NASCAR.svg">NASCAR Logo</a> public domain</figcaption>
+            </figure>
+            <fieldset>
+                <legend>NASCAR Series</legend>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Series</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cup Series</td>
+                        <td>The top-level NASCAR racing series featuring the fastest cars and most famous drivers.</td>
+                    </tr>
+                    <tr>
+                        <td>Xfinity Series</td>
+                        <td>The second-tier series where future stars hone their skills before moving up to the Cup Series.</td>
+                    </tr>
+                    <tr>
+                        <td>Truck Series</td>
+                        <td>Exciting racing with modified pickup trucks on NASCAR tracks across the country.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+        </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I grew up in Charlotte and decided to come to UNCC because of the NASCAR and Racing connections. 
+                I love all forms of motorsports, especially NASCAR. When I graduate, I hope to be working in the industry making tools, 
+                tire data processing, and working in vehicle development and simulation.</p>
+            <figure>
+                <img src="images/trucknight.jpg" alt="Truck Night Race at CMS" width="600">
+                <figcaption>Truck Night Race at CMS taken by Me</figcaption>
+            </figure>
+            <fieldset>
+                <legend>Connect with Me</legend>
+                <a href="https://www.linkedin.com/in/francisco-antunez-21769322b/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/francoa325" target="_blank">GitHub</a>
+                <a href="https://www.instagram.com/franco_a325/" target="_blank">Instagram</a>
+            </fieldset>
+        </section>
+        <section id="schedule">
+            <h2>Schedule</h2>
+            <p>Here is the schedule for the 2024 NASCAR Playoffs</p>
+            <figure>
+                <img src="images/cupSch.jpg" alt="Schedule">
+                <figcaption>Cup Schedule</figcaption>
+            </figure>
+            <figure>
+                <img src="images/xfinsch.jpg" alt="Schedule">
+                <figcaption>Xfinity Schedule</figcaption>
+            </figure>
+            <figure>
+                <img src="images/trucksch.jpg" alt="Schedule">
+                <figcaption>Truck Schedule</figcaption>
+            </figure>
+            <p>Source for the above schedules: <a href="https://www.jayski.com/">jayski.com</a></p>
+        </section>
+        <section id="tracks">
+            <h2>Best Tracks</h2>
+
+            <p>For any NASCAR fan, Charlotte Motor Speedway (CMS) is a must-see. Located in the heart of racing country, 
+                CMS hosts some of the biggest events in NASCAR, including the Coca-Cola 600 and the All-Star Race. Its rich history, 
+                combined with state-of-the-art facilities, makes it a top destination for fans and drivers alike.</p>
+            <figure>
+                <img src="images/charlotte.jpg" alt="Charlotte Motor Speedway" width="400">
+                <figcaption><a href="https://commons.wikimedia.org/wiki/File:Lowesmotorspeedway.jpg">Charlotte Motor Speedway</a> from NASA is in the public domain.</figcaption>
+            </figure>
+
+            <p>Talladega Superspeedway and Darlington Raceway are also iconic stops on the NASCAR circuit. Talladega is famous for its towering grandstands, 
+                blistering speeds, and the adrenaline-pumping unpredictability of pack racing. Meanwhile, Darlington, with its unique, egg-shaped layout, 
+                presents a challenge like no other. Known as “The Lady in Black,” Darlington is steeped in tradition and remains one of the most challenging and 
+                revered tracks in NASCAR.</p>
+            <figure>
+                <img src="images/dega.jpg" alt="Talladega Superspeedway" width="400">
+                <figcaption><a href="https://commons.wikimedia.org/wiki/File:TalladegaSuperspeedway2.jpg">Talladega Superspeedway</a> by user AuburnPilot is public domain</figcaption>
+            </figure>
+            <figure>
+                <img src="images/darlington.jpg" alt="Darlington Raceway" width="400">
+                <figcaption><a href="https://www.flickr.com/photos/zzazazz/52798660639/in/album-72177720307316081">Darlington Raceway</a> by Ed McDonald is licensed under CC BY-NC 2.0.</figcaption>
+            </figure>
+            <p>Last but not least, Daytona International Speedway, home of the Daytona 500. A legendary venue that embodies
+                the spirit and excitement of NASCAR.</p>
+            <figure>
+                <img src="images/daytona.jpg" alt="Daytona International Speedway" width="400">
+                <figcaption><a href="https://www.flickr.com/photos/zzazazz/52798660639/in/album-72177720307316081">Daytona International Speedway</a> by Nickeeth Lopez is licensed under CC BY-NC 2.0.</figcaption>
+            </figure>
+        </section>
+        <section id="how">
+            <h2>Getting Started: Watching and Local Racing</h2>
+            <p>Getting into NASCAR is a great way to connect with motorsports, whether you're watching or participating. 
+                Start by learning the basics, watching major races like the Daytona 500, and following popular drivers. 
+                Attending local races at smaller tracks gives you firsthand experience and insight into different racing series like the Xfinity or Truck Series.</p>
+            <p>For those interested in racing, local leagues offer entry-level classes such as street stock or mini stock, making it easy to start on a budget. 
+                These grassroots events are beginner-friendly and provide a community for learning. 
+                Getting advice from local racers can help you quickly gain experience in the world of racing.</p>
+            <p>There are plenty of sites and tools to help you learn the ins and outs of the sport. the NASCAR mobile app provides radio coverage
+                for each of the races as well as live timing and scoring. The NASCAR website also has a wealth of information on the sport and its history.
+                Other sites like <a href="https://www.jayski.com/">jayski.com</a> provide up-to-date news and information on the sport as well as technical information on the cars and tracks.
+            </p> 
+            <figure>
+                <img src="images/NASCAR.svg" alt="NASCAR Racing" width="300">
+                <figcaption>Source: <a href="https://commons.wikimedia.org/wiki/File:NASCAR.svg">Wikimedia Commons</a></figcaption>
+            </figure>   
+        </section>
+        <section id="why">
+            <h2>Why</h2>
+            <p>NASCAR offers thrilling, high-speed action with close competition and strategic racing. 
+                Each race is unique, with diverse tracks and passionate drivers, creating an exciting experience 
+                for fans. Whether you enjoy the technical aspects or the thrill of live events, NASCAR brings a dynamic connection to motorsports.</p>
+            <figure>
+                <img src="images/dirt.jpg" alt="dirt Track" width="600">
+                <figcaption>Cherokee Speedway taken by me</figcaption>
+            </figure> 
+            <fieldset>
+                <legend>Charlotte, NC Local Tracks</legend>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Track Name</th>
+                            <th>Type</th>
+                            <th>Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Millbridge Speedway</td>
+                            <td>Dirt</td>
+                            <td><a href="https://millbridgespeedway.com/" target="_blank">Visit</a></td>
+                        </tr>
+                        <tr>
+                            <td>The Dirt Track at CMS</td>
+                            <td>Dirt</td>
+                            <td><a href="https://www.charlottemotorspeedway.com/dirt/" target="_blank">Visit</a></td>
+                        </tr>
+                        <tr>
+                            <td>Cherokee Speedway</td>
+                            <td>Dirt</td>
+                            <td><a href="http://www.cherokeespeedwaysc.com/" target="_blank">Visit</a></td>
+                        </tr>
+                        <tr>
+                            <td>Bowman Gray Stadium</td>
+                            <td>Asphalt</td>
+                            <td><a href="https://bowmangrayracing.com/" target="_blank">Visit</a></td>
+                        </tr>
+                        <tr>
+                            <td>Caraway Speedway</td>
+                            <td>Asphalt</td>
+                            <td><a href="https://carawayspeedway.com/" target="_blank">Visit</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+            
+        </section> 
+        <section id="aiprompts">
+            <h2>AI Prompts</h2>
+            <p>The following are a list of prompts that were used to build and fleshout the content on this site:</p>
+            <fieldset>
+                <legend>AI Prompts, using GPT 3.5</legend>
+                <p>Build an outline for bucketlist NASCAR tracks including CMS, Talladega, Darlington, and Daytona </p>
+                <p>Adjust the current css with a different color theme</p>
+                <p>Format image accreditation with authors and license information</p>
+            </fieldset>
+        </section>
+    </main>
+    <footer>
+        <div class="validation-buttons">
+            <a href="https://validator.w3.org/nu/?doc=https://webpages.charlotte.edu/fantunez/itis3135/hobby/index.html">HTML Validation</a>
+            <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://webpages.charlotte.edu/fantunez/itis3135/hobby/index.html">CSS Validation</a>
+            <a href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/fantunez/itis3135/hobby/index.html">Wave Validation</a>
+        </div>
+        <p>Designed by <a href="https://yourdesignfirm.com">Antunez Designed</a></p>
+    </footer>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('home');
+        });
+    </script>
+</body>
 </html>
