@@ -1,0 +1,13 @@
+[
+    {"name": "Home ", "url": "index.html"},
+    {"name": "About ", "url": "about.html"},
+    {"name": "Tables ", "url": "tables.html"},
+    {"name": "Forms ", "url": "forms.html"},
+    {"name": "CRAP Design ", "url": "crappage.html"},
+    {"name": "Client Project ", "url": "/itis3135/client"},
+    {"name": "First Scripts ", "url": "firstscripts.html"},
+    {"name": "BYO Intro ", "url": "byo_intro.html"},
+    {"name": "Drawing ", "url": "drawing.html"},
+    {"name": "Crappy Webpage", "url": "stuff/STUFF !page.htm"},
+    {"name": "Midterm Hobby Page", "url": "hobby/index.html"}
+]

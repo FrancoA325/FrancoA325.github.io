@@ -4,7 +4,8 @@
         <title>Franco Antunez || Funky Ant</title>
         <link rel ="stylesheet" href="styles/default.css">
         <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous" alt="Accumulus"></script>
-        <script src="scripts/HTMLInclude.js" defer></script>
+        <!-- <script src="scripts/HTMLInclude.js" defer></script> -->
+        <script src="scripts/menu.js" defer></script>
     </head>
     <body>
         <div id="header"></div>
@@ -39,7 +40,14 @@
             <p class="indented"><strong>DTSC 3601: Predictive Analytics:</strong> Requirement for the major.</p>
             <p class="indented"><strong>ITSC 3155: Software Engineering:</strong> Requirement for my minor.</p>
             <a href = "contract.html">Contract</a>
+            
+            <div id="validation-buttons">
+                <button onclick="validateHTML()">Validate HTML</button>
+                <button onclick="validateCSS()">Validate CSS</button>
+                <button onclick="validateAIM()">Validate AIM</button>
+            </div>
         </main>
         <div id="footer"></div>
+
     </body>
 </html>
