@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Add any additional CSS here */
+        .slideshow-container {
+            position: relative;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .slides {
+            display: none;
+        }
+        .caption {
+            text-align: center;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .image-list {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image-list img {
+            cursor: pointer;
+            width: 100px;
+            height: auto;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+    <main>
+        <div class="slideshow-container">
+            <div class="slides">
+                <img src="images/money.jpg" style="width:100%">
+                <div class="caption">M - for Money</div>
+            </div>
+            <div class="slides">
+                <img src="images/yoyo.jpg" style="width:100%">
+                <div class="caption">Y - for Yoyo</div>
+            </div>
+            <!-- Add more slides here -->
+        </div>
+        <div class="image-list">
+            <img src="images/money.jpg" alt="Money" onclick="showSlide(1)">
+            <img src="images/yoyo.jpg" alt="Yoyo" onclick="showSlide(2)">
+            <!-- Add more thumbnail images here -->
+        </div>
+        <div>
+            <h3>AI Generated Prompts:</h3>
+            <ul>
+                <li>Money: "A picture of money in landscape"</li>
+                <li>Yoyo: "A picture of a yoyo in landscape"</li>
+                <!-- Add more prompts here -->
+            </ul>
+            <p>Tool used: Chatgpt 4.0</p>
+        </div>
+    </main>
+    <div id="footer"></div>
+    <script>
+        $(document).ready(function(){
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                let slides = $(".slides");
+                slides.each(function(index, slide) {
+                    $(slide).hide();
+                });
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}
+                $(slides[slideIndex-1]).show();
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+
+            window.showSlide = function(n) {
+                let slides = $(".slides");
+                slides.each(function(index, slide) {
+                    $(slide).hide();
+                });
+                $(slides[n-1]).show();
+            }
+        });
+    </script>
+</body>
+</html>
