@@ -13,26 +13,19 @@
     <main>
         <h1>Designs</h1>
         <p>Explore our CAD designs and notes for the vehicle’s chassis and components. View 3D models and download design documentation.</p>
+        
+        <div id="model-buttons">
+            <button onclick="switchModel('upright2.stl')">Upright</button>
+            <button onclick="switchModel('chassis.stl')">Chassis</button>
+            <button onclick="switchModel('intake.stl')">Intake</button>
+        </div>
+        
         <div id="stl_cont" style="width:500px;height:500px;margin:0 auto;"></div>
 
         <script src="scripts/stl_viewer.min.js"></script>        
-        <script>
-            var stl_viewer=new StlViewer
-            (
-                document.getElementById("stl_cont"),
-                {
-                    models:
-                    [
-                        {filename:"../images/upright2.stl",
-                            color: "#FF69B4", // Grey color
-                            edges: true, // Enable edges
-                            edgeColor: "#000000" // Black edges 
-                        }
-                    ]
-                }
-            );
-        </script>
-    
+        <script src="scripts/stlswitcher.js"></script>
+        <button onclick="animateModel()">Animate start</button>
+        <button onclick="stopAnimation()">Animate stop</button>
     </main>
     <div id="footer"></div>
 </body>
