@@ -5,58 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media - 49ers Racing Vehicle Dynamics Subteam</title>
     <link rel="stylesheet" href="styles/default.css">
-    <style>
-        .slideshow-container {
-            position: relative;
-            max-width: 1000px;
-            margin: auto;
-        }
-        .slides {
-            display: none;
-        }
-        .slides img {
-            width: 100%;
-            height: auto;
-        }
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-        }
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-        .prev:hover, .next:hover {
-            background-color: rgba(0,0,0,0.8);
-        }
-        .caption {
-            text-align: center;
-            padding: 8px 12px;
-            position: absolute;
-            bottom: 8px;
-            width: 100%;
-            color: #fff;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-    </style>
     <script src="scripts/main.js" defer></script>
 </head>
 <body>
     <div id="header"></div>
     <main>
-        <h1>Media</h1>
-        <p>Check out our photo galleries and videos related to vehicle design, testing, and team events.</p>
-        
         <div class="slideshow-container">
             <div class="slides">
                 <img src="images/proving.jpg" alt="shootout">
@@ -67,12 +20,17 @@
                 <div class="caption">Legends Car Racing</div>
             </div>
             <div class="slides">
-                <img src="images/shop.jpg" alt="shopspace">
+                <img src="images/shop.jpg" alt="shop space">
                 <div class="caption">Race Shop</div>
             </div>
-            <!-- Add more slides as needed -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="slides">
+                <img src="images/chassis.jpg" alt="Chassis">
+                <div class="caption">Chassis on Bluco</div>
+            </div>
+            <div class="slides">
+                <img src="images/lathe.jpg" alt="lathe">
+                <div class="caption">Machining on lathe</div>
+            </div>
         </div>
     </main>
     <div id="footer"></div>

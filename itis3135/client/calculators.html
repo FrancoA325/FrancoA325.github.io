@@ -6,12 +6,77 @@
     <title>Calculators - 49ers Racing Vehicle Dynamics Subteam</title>
     <link rel="stylesheet" href="styles/default.css">
     <script src="scripts/main.js" defer></script>
+    <script src="scripts/calculation.js" defer></script>
 </head>
 <body>
     <div id="header"></div>
     <main>
         <h1>Calculators</h1>
-        <p>Here you will find various calculators to assist with vehicle dynamics calculations, such as tire force, suspension geometry, and weight distribution.</p>
+        <p>Here you will find various calculators to assist with vehicle dynamics calculations.</p>
+        
+        <fieldset>
+            <legend>Static Mass Calculations</legend>
+            <h3>Inputs</h3>
+            <table>
+                <tr>
+                    <th>Left Front</th>
+                    <th>Right Front</th>
+                    <th>Left Rear</th>
+                    <th>Right Rear</th>
+                </tr>
+                <tr>
+                    <td><input type="number" id="lf" value="100"></td>
+                    <td><input type="number" id="rf" value="100"></td>
+                    <td><input type="number" id="lr" value="100"></td>
+                    <td><input type="number" id="rr" value="100"></td>
+                </tr>
+            </table>
+            <button id="calculate-button">Calculate</button>
+            <h3>Results</h3>
+            <table>
+                <tr>
+                    <th>Front Axle Weight</th>
+                    <th>Rear Axle Weight</th>
+                    <th>Total Weight</th>
+                    <th>Crossweight Percent</th>
+                    <th>Front Weight Percent</th>
+                </tr>
+                <tr>
+                    <td><input type="text" id="front-axle-weight" readonly></td>
+                    <td><input type="text" id="rear-axle-weight" readonly></td>
+                    <td><input type="text" id="total-weight" readonly></td>
+                    <td><input type="text" id="crossweight-percent" readonly></td>
+                    <td><input type="text" id="front-weight-percent" readonly></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Second Calculator</legend>
+            <h3>Inputs</h3>
+            <table>
+                <tr>
+                    <th>Input 1</th>
+                    <th>Input 2</th>
+                </tr>
+                <tr>
+                    <td><input type="number" id="input1" value="50"></td>
+                    <td><input type="number" id="input2" value="50"></td>
+                </tr>
+            </table>
+            <button id="calculate-second-button">Calculate</button>
+            <h3>Results</h3>
+            <table>
+                <tr>
+                    <th>Result 1</th>
+                    <th>Result 2</th>
+                </tr>
+                <tr>
+                    <td><input type="text" id="result1" readonly></td>
+                    <td><input type="text" id="result2" readonly></td>
+                </tr>
+            </table>
+        </fieldset>
     </main>
-    <div id="footer"></div>
 </body>
+</html>
