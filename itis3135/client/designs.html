@@ -6,16 +6,33 @@
     <title>Designs - 49ers Racing Vehicle Dynamics Subteam</title>
     <link rel="stylesheet" href="styles/default.css">
     <script src="scripts/main.js" defer></script>
+
 </head>
 <body>
     <div id="header"></div>
     <main>
         <h1>Designs</h1>
         <p>Explore our CAD designs and notes for the vehicle’s chassis and components. View 3D models and download design documentation.</p>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/STLLoader.js"></script>
-        <script src="scripts/viewer.js" defer></script>
-      
+        <div id="stl_cont" style="width:500px;height:500px;margin:0 auto;"></div>
+
+        <script src="scripts/stl_viewer.min.js"></script>        
+        <script>
+            var stl_viewer=new StlViewer
+            (
+                document.getElementById("stl_cont"),
+                {
+                    models:
+                    [
+                        {filename:"../images/upright2.stl",
+                            color: "#FF69B4", // Grey color
+                            edges: true, // Enable edges
+                            edgeColor: "#000000" // Black edges 
+                        }
+                    ]
+                }
+            );
+        </script>
+    
     </main>
     <div id="footer"></div>
 </body>

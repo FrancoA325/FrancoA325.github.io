@@ -29,16 +29,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.getElementById('calculate-button').addEventListener('click', calculateResults);
 
-    function calculateSecondResults() {
-        const input1 = parseFloat(document.getElementById('input1').value) || 0;
-        const input2 = parseFloat(document.getElementById('input2').value) || 0;
-
-        const result1 = input1 + input2;
-        const result2 = input1 * input2;
-
-        document.getElementById('result1').value = result1.toFixed(2);
-        document.getElementById('result2').value = result2.toFixed(2);
+    function calculateCorneringSpeed() {
+        // Get the input values
+        const radius = parseFloat(document.getElementById('radius').value);
+        const angularVelocity = parseFloat(document.getElementById('ang-vel').value);
+    
+        // Calculate the cornering speed
+        const corneringSpeed = radius * angularVelocity;
+    
+        // Update the result in the HTML
+        document.getElementById('velocity').value = corneringSpeed.toFixed(2);
     }
+    
 
-    document.getElementById('calculate-second-button').addEventListener('click', calculateSecondResults);
+    document.getElementById('calculate-velocity').addEventListener('click', calculateCorneringSpeed);
 });
