@@ -23,5 +23,6 @@ function validateCSS() {
 }
 
 function validateAIM() {
-    window.open("https://webaim.org/search/?q=afsd", "_blank");
+    const currentURL = encodeURIComponent(window.location.href);
+    window.open(`https://webaim.org/search/?q=${currentURL}`, "_blank");
 }
