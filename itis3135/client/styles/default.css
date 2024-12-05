@@ -16,7 +16,7 @@ body {
     position: relative;
 }
 .pdf-container {
-    width: 800px;
+    width: 1200px;
     height: 600px;
     overflow: auto;
 }
