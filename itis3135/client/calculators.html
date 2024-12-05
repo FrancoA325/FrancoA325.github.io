@@ -9,11 +9,14 @@
     <script src="scripts/calculation.js" defer></script>
 </head>
 <body>
+    <!-- Header section -->
     <div id="header"></div>
     <main>
+        <!-- Main content -->
         <h1>Calculators</h1>
         <p>Here you will find various calculators to assist with vehicle dynamics calculations.</p>
         
+        <!-- Static Mass Calculations section -->
         <fieldset>
             <legend>Static Mass Calculations</legend>
             <h3>Inputs</h3>
@@ -25,12 +28,14 @@
                     <th>Right Rear</th>
                 </tr>
                 <tr>
+                    <!-- Input fields for static mass calculations -->
                     <td><input type="number" id="lf" value="100"></td>
                     <td><input type="number" id="rf" value="100"></td>
                     <td><input type="number" id="lr" value="100"></td>
                     <td><input type="number" id="rr" value="100"></td>
                 </tr>
             </table>
+            <!-- Button to trigger static mass calculations -->
             <button id="calculate-button">Calculate</button>
             <h3>Results</h3>
             <table>
@@ -42,6 +47,7 @@
                     <th>Front Weight Percent</th>
                 </tr>
                 <tr>
+                    <!-- Output fields for static mass calculation results -->
                     <td><input type="text" id="front-axle-weight" readonly></td>
                     <td><input type="text" id="rear-axle-weight" readonly></td>
                     <td><input type="text" id="total-weight" readonly></td>
@@ -51,6 +57,7 @@
             </table>
         </fieldset>
 
+        <!-- Cornering Speed Calculation section -->
         <fieldset>
             <legend>Cornering Speed Calculation</legend>
             <h3>Inputs</h3>
@@ -60,10 +67,12 @@
                     <th>Angular Velocity</th>
                 </tr>
                 <tr>
+                    <!-- Input fields for cornering speed calculations -->
                     <td><input type="number" id="radius" value="50"></td>
                     <td><input type="number" id="ang-vel" value="50"></td>
                 </tr>
             </table>
+            <!-- Button to trigger cornering speed calculations -->
             <button id="calculate-velocity">Calculate</button>
             <h3>Results</h3>
             <table>
@@ -71,11 +80,13 @@
                     <th>Cornering Speed</th>
                 </tr>
                 <tr>
+                    <!-- Output field for cornering speed calculation result -->
                     <td><input type="text" id="velocity" readonly></td>
                 </tr>
             </table>
         </fieldset>
     </main>
+    <!-- Footer section -->
     <div id="footer"></div>
 </body>
 </html>

@@ -6,27 +6,32 @@
     <title>Designs - 49ers Racing Vehicle Dynamics Subteam</title>
     <link rel="stylesheet" href="styles/default.css">
     <script src="scripts/main.js" defer></script>
-
 </head>
 <body>
+    <!-- Header section -->
     <div id="header"></div>
     <main>
+        <!-- Main content -->
         <h1>Designs</h1>
         <p>Explore our CAD designs and notes for the vehicle’s chassis and components. View 3D models and download design documentation.</p>
         
+        <!-- Model switcher buttons -->
         <div id="model-buttons">
             <button onclick="switchModel('upright2.stl')">Upright</button>
             <button onclick="switchModel('chassis.stl')">Chassis</button>
             <button onclick="switchModel('intake.stl')">Intake</button>
         </div>
         
+        <!-- STL viewer container -->
         <div id="stl_cont" style="width:500px;height:500px;margin:0 auto;"></div>
 
+        <!-- Scripts for STL viewer and model switching -->
         <script src="scripts/stl_viewer.min.js"></script>        
         <script src="scripts/stlswitcher.js"></script>
         <button onclick="animateModel()">Animate start</button>
         <button onclick="stopAnimation()">Animate stop</button>
     </main>
+    <!-- Footer section -->
     <div id="footer"></div>
 </body>
 </html>
